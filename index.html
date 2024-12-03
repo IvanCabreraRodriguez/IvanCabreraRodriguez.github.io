@@ -1,20 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivan Cabrera Rodriguez - Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Datos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>Hosted page with GitHub</p>
-    <input type="tel" name="" id="">
-    <input type="color" name="" id="">
-    <input type="datetime-local" name="" id="">
-    <input type="hidden" name="">
-    <input type="radio" name="" id="">
-    <input type="email" name="" id="">
-    <input type="file" name="" id="">
-    <input type="search" name="" id="">
+  <form id="userForm">
+    <fieldset>
+      <legend>Datos Usuario</legend>
+      <div class="form-group">
+        <label for="username">Nombre de Usuario</label>
+        <input type="text" id="username" name="username" placeholder="UserName" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="Introduce Contraseña" required>
+        <div>
+          <label>
+            <input type="checkbox" id="showPassword"> Mostrar Contraseña
+          </label>
+        </div>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Datos Personales</legend>
+      <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+      </div>
+      <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+      </div>
+      <div class="form-group">
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ejem: (+34)922123123" required pattern="^\(\+34\)[0-9]{9}$">
+      </div>
+      <div class="form-group">
+        <label for="codigoPostal">Código Postal</label>
+        <input type="text" id="codigoPostal" name="codigoPostal" placeholder="38XXX" required pattern="^\d{5}$">
+      </div>
+      <div class="form-group">
+        <label for="dni">DNI/NIE</label>
+        <input type="text" id="dni" name="dni" placeholder="DNI / NIE" required>
+      </div>
+      <div class="form-group">
+        <label>Crear cuenta como:</label>
+        <label><input type="radio" name="tipoCuenta" value="particular" required> Particular</label>
+        <label><input type="radio" name="tipoCuenta" value="empresa" required> Empresa</label>
+      </div>
+      <div class="form-group">
+        <label for="nacimiento">Año de Nacimiento</label>
+        <select id="nacimiento" name="nacimiento" required>
+          <option value="2010">2010</option>
+          <option value="2000">2000</option>
+          <option value="1990">1990</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Elige tus aficiones:</label>
+        <label><input type="checkbox" name="aficiones" value="Musica"> Música</label>
+        <label><input type="checkbox" name="aficiones" value="Deporte"> Deporte</label>
+        <label><input type="checkbox" name="aficiones" value="Videojuegos"> Video Juegos</label>
+        <label><input type="checkbox" name="aficiones" value="Manualidades"> Manualidades</label>
+        <label><input type="checkbox" name="aficiones" value="Artes"> Artes</label>
+        <label><input type="checkbox" name="aficiones" value="Lectura"> Lectura</label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Datos Publicación</legend>
+      <div class="form-group">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" name="titulo" placeholder="Título" maxlength="15" required>
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" name="descripcion" placeholder="Escribe una descripción" maxlength="120" required></textarea>
+      </div>
+    </fieldset>
+
+    <button type="submit">Enviar</button>
+  </form>
 </body>
 </html>
