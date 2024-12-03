@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario de Datos</title>
-  <link rel="stylesheet" href="styles.css">
-  <script defer src="scripts.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <form id="userForm" action="https://www.w3schools.com/action_page.php" method="post">
@@ -21,7 +21,7 @@
           <input type="password" id="password" name="password" placeholder="Introduce Contraseña" required>
         </div>
       </div>
-      <div class="row">
+      <div class="row align-center">
         <label>
           <input type="checkbox" id="showPassword"> Mostrar Contraseña
         </label>
@@ -52,10 +52,13 @@
       </div>
       <div class="row">
         <div class="form-group">
-          <label for="dni">DNI/NIE</label>
+          <select name="dni" id="dni">
+            <option value="DNI">DNI</option>
+            <option value="NIE">NIE</option>
+          </select>
           <input type="text" id="dni" name="dni" placeholder="DNI / NIE" required>
         </div>
-        <div class="form-group">
+        <div class="form-group radio-group">
           <label>Crear cuenta como:</label>
           <label><input type="radio" name="tipoCuenta" value="particular" required> Particular</label>
           <label><input type="radio" name="tipoCuenta" value="empresa" required> Empresa</label>
@@ -113,14 +116,14 @@
       </div>
       <div class="row">
         <label>Elige tus aficiones:</label>
-        <div class="checkbox-group">
+        <table class="checkbox-group">
           <label><input type="checkbox" name="aficiones" value="Musica"> Música</label>
           <label><input type="checkbox" name="aficiones" value="Deporte"> Deporte</label>
           <label><input type="checkbox" name="aficiones" value="Videojuegos"> Video Juegos</label>
           <label><input type="checkbox" name="aficiones" value="Manualidades"> Manualidades</label>
           <label><input type="checkbox" name="aficiones" value="Artes"> Artes</label>
           <label><input type="checkbox" name="aficiones" value="Lectura"> Lectura</label>
-        </div>
+        </table>
       </div>
     </fieldset>
 
@@ -140,3 +143,4 @@
   </form>
 </body>
 </html>
+

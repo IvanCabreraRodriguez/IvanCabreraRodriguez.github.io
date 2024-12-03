@@ -36,6 +36,9 @@ legend {
   margin-bottom: 10px;
 }
 
+.showPassword{
+  display: flex;
+}
 .checkbox-group {
   display: flex;
   flex-wrap: wrap;
